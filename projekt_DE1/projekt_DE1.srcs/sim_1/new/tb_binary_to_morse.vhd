@@ -19,6 +19,7 @@ architecture testbench of tb_binary_to_morse is
   constant c_CLK_100MHZ_PERIOD : time := 10 ns;
 
   -- Testench local signals
+  signal sig_en : std_logic;
   signal sig_clk_100mhz : std_logic;
   signal sig_snd        : std_logic;
   signal sig_morse      : std_logic;
@@ -58,7 +59,7 @@ begin
   p_data_gen : process is
   begin
 
-    report "Stimulus process started";
+   
 
     sig_snd <= '0';
     sig_bin <= "1000001";
@@ -67,7 +68,6 @@ begin
 
     
 
-    report "Stimulus process finished";
     wait;
 
   end process p_data_gen;

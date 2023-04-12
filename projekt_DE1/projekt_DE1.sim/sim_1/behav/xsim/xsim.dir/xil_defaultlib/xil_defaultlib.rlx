@@ -2,5 +2,6 @@
 2020.2
 Nov 18 2020
 09:47:47
-C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,1681307047,vhdl,,,,tb_binary_to_morse,,,,,,,,
-C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd,1681307750,vhdl,C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,,,binary_to_morse,,,,,,,,
+C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,1681310915,vhdl,,,,tb_binary_to_morse,,,,,,,,
+C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd,1681311026,vhdl,C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,,,binary_to_morse,,,,,,,,
+C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/clock_enable.vhd,1681310453,vhdl,C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd,,,clock_enable,,,,,,,,

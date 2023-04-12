@@ -16,17 +16,34 @@ end entity binary_to_morse;
 
 architecture Behavioral of binary_to_morse is
 
+  signal sig_en : std_logic;
   signal sig_cnt   : unsigned(4 downto 0);
-  constant c_short0 : unsigned(4 downto 0) := b"00010";-- 0.5sec
-  constant c_short : unsigned(4 downto 0) := b"00011";--1sec
-  constant c_long  : unsigned(4 downto 0) := b"00110";--2sec
+  constant c_short0 : unsigned(4 downto 0) := b"0_0001"; -- 0.5sec
+  constant c_short : unsigned(4 downto 0) := b"0_0011"; --0.75sec carka trojnasobek tecky
+  constant c_long  : unsigned(4 downto 0) := b"0_0010"; --2sec
 
 
 begin
 
+clock_enable : entity work.clock_enable
+    generic map (
+      -- FOR SIMULATION, KEEP THIS VALUE TO 1
+      -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
+      -- 1   @ 10 ns
+      -- 25 000 000 @ 250 ms
+      g_MAX => 1
+    )
+    port map (
+      clk => clk,
+      rst => '0',
+      ce  => sig_en
+    );
+    
 bin_to_morse : process (clk) is
  begin
-    if (rising_edge(clk)) then
+  
+  if (rising_edge(clk)) then
+   -- if (sig_en = '1') then
       if (snd = '0') then
         morse <= '0';
         sig_cnt  <= (others => '0');
@@ -144,7 +161,8 @@ bin_to_morse : process (clk) is
 
       end if;
     end if;
-
+  --end if;
+  
   end process bin_to_morse;
  
 end Behavioral;
