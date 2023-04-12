@@ -2,10 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr 12 14:43:59 2023
-# Process ID: 2620
+# Start of session at: Wed Apr 12 15:51:08 2023
+# Process ID: 11592
 # Current directory: C:/Users/239009/projekt/projekt_DE1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4956 C:\Users\239009\projekt\projekt_DE1\projekt_DE1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11564 C:\Users\239009\projekt\projekt_DE1\projekt_DE1.xpr
 # Log file: C:/Users/239009/projekt/projekt_DE1/vivado.log
 # Journal file: C:/Users/239009/projekt/projekt_DE1\vivado.jou
 #-----------------------------------------------------------
@@ -18,66 +18,70 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/appz/Xilinx/Vivado/2020.2/data/ip'.
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-file mkdir C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd w ]
-add_files -fileset sim_1 C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-update_compile_order -fileset sim_1
-export_ip_user_files -of_objects  [get_files C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd] -no_script -reset -force -quiet
-remove_files  C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd
-add_files -norecurse C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd
-update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj top_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'cnt_up_down'
-ERROR: [VRFC 10-3557] near 'std_logic_vector' ; type conversion does not match type 'std_logic' [C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd:75]
-ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd:44]
-INFO: [VRFC 10-3070] VHDL file 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd' ignored due to errors
+"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj top_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'cnt_up_down'
-ERROR: [VRFC 10-3557] near 'std_logic_vector' ; type conversion does not match type 'std_logic' [C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd:75]
-ERROR: [VRFC 10-3782] unit 'behavioral' ignored due to previous errors [C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd:44]
-INFO: [VRFC 10-3070] VHDL file 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/cnt_up_down.vhd' ignored due to errors
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-99] Step results log file:'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim/xvhdl.log'
-ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
-ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
-ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
-set_property top tb_binary_to_morse [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-update_compile_order -fileset sim_1
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
+"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
+Built simulation snapshot tb_binary_to_morse_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source tb_binary_to_morse.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000 ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
+Note: Stimulus process finished
+Time: 10 ns  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000 ns
+launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 999.715 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
@@ -112,304 +116,6 @@ Compiling package ieee.numeric_std
 Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
 Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
 Built simulation snapshot tb_binary_to_morse_behav
-
-****** Webtalk v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
-source C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim/xsim.dir/tb_binary_to_morse_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim/xsim.dir/tb_binary_to_morse_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 12 15:26:15 2023. For additional details about this file, please refer to the WebTalk help file at C:/appz/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Wed Apr 12 15:26:15 2023...
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 999.352 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 999.352 ; gain = 0.000
-set_property -name {xsim.simulate.runtime} -value {10 s} -objects [get_filesets sim_1]
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 999.352 ; gain = 0.000
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 10 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 10 s
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 10 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 10 s
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 999.352 ; gain = 0.000
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 10 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 1 s  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 10 s
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 10 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 1 s  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 10 s
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
@@ -428,7 +134,7 @@ source tb_binary_to_morse.tcl
 #      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
 #   }
 # }
-# run 10 s
+# run 1000 ns
 Note: Stimulus process started
 Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
 Note: Stimulus process finished
@@ -436,273 +142,10 @@ Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/User
 Note: Stimulus process started
 Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
 Note: Stimulus process finished
-Time: 1 s  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
+Time: 10 ns  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 10 s
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 10 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 999.352 ; gain = 0.000
-INFO: [Common 17-344] 'run' was cancelled
-INFO: [Common 17-344] 'source' was cancelled
-xsim: Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 999.352 ; gain = 0.000
-INFO: [Common 17-344] 'xsim' was cancelled
-INFO: [Vivado 12-5357] 'simulate' step aborted
-launch_simulation: Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 999.352 ; gain = 0.000
-INFO: [Common 17-344] 'launch_simulation' was cancelled
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 10 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 1 s  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 10 s
-set_property -name {xsim.simulate.runtime} -value {5 s} -objects [get_filesets sim_1]
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-run: Time (s): cpu = 00:01:21 ; elapsed = 00:01:20 . Memory (MB): peak = 999.352 ; gain = 0.000
-INFO: [Common 17-344] 'run' was cancelled
-INFO: [Common 17-344] 'source' was cancelled
-xsim: Time (s): cpu = 00:01:22 ; elapsed = 00:01:22 . Memory (MB): peak = 999.352 ; gain = 0.000
-INFO: [Common 17-344] 'xsim' was cancelled
-INFO: [Vivado 12-5357] 'simulate' step aborted
-launch_simulation: Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 999.352 ; gain = 0.000
-INFO: [Common 17-344] 'launch_simulation' was cancelled
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 5 s
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 1 s  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 5 s
-set_property -name {xsim.simulate.runtime} -value {1000ns} -objects [get_filesets sim_1]
+INFO: [USF-XSim-97] XSim simulation ran for 1000 ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 999.715 ; gain = 0.000
 relaunch_sim
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
@@ -713,6 +156,10 @@ INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
 "xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'binary_to_morse'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
 INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 Command: launch_simulation -simset sim_1 -mode behavioral
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
@@ -725,142 +172,6 @@ Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 1 s  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 999.352 ; gain = 0.000
-set_property -name {xsim.simulate.runtime} -value {1000 ns} -objects [get_filesets sim_1]
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000 ns
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000 ns
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'binary_to_morse'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
@@ -872,24 +183,8 @@ Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [bina
 Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
 Built simulation snapshot tb_binary_to_morse_behav
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
 Vivado Simulator 2020.2
 Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000 ns
 Note: Stimulus process started
 Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
 Note: Stimulus process finished
@@ -898,93 +193,4 @@ Note: Stimulus process started
 Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
 Note: Stimulus process finished
 Time: 10 ns  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000 ns
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sources_1\new\binary_to_morse.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\239009\projekt\projekt_DE1\projekt_DE1.srcs\sim_1\new\tb_binary_to_morse.vhd:]
-ERROR: [Common 17-180] Spawn failed: No error
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_binary_to_morse' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_binary_to_morse_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'binary_to_morse'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_binary_to_morse'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-"xelab -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/appz/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto c985d7ba06584c27a95836d1f8082d21 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_binary_to_morse_behav xil_defaultlib.tb_binary_to_morse -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
-Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
-Built simulation snapshot tb_binary_to_morse_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/239009/projekt/projekt_DE1/projekt_DE1.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_binary_to_morse_behav -key {Behavioral:sim_1:Functional:tb_binary_to_morse} -tclbatch {tb_binary_to_morse.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source tb_binary_to_morse.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000 ns
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-Note: Stimulus process finished
-Time: 10 ns  Iteration: 0  Process: /tb_binary_to_morse/p_data_gen  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_binary_to_morse_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000 ns
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-exit
-INFO: [Common 17-206] Exiting Vivado at Wed Apr 12 15:48:56 2023...
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 999.715 ; gain = 0.000
