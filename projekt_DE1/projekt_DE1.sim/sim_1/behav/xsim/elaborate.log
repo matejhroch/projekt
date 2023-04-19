@@ -11,7 +11,7 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=1)\]
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=25000000)\]
 Compiling architecture behavioral of entity xil_defaultlib.binary_to_morse [binary_to_morse_default]
 Compiling architecture testbench of entity xil_defaultlib.tb_binary_to_morse
 Built simulation snapshot tb_binary_to_morse_behav

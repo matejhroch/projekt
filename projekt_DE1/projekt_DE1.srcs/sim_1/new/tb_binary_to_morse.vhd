@@ -20,6 +20,7 @@ architecture testbench of tb_binary_to_morse is
 
   -- Testench local signals
   signal sig_en : std_logic;
+  signal sig_rst : std_logic;
   signal sig_clk_100mhz : std_logic;
   signal sig_snd        : std_logic;
   signal sig_morse      : std_logic;
@@ -31,7 +32,7 @@ begin
  p_clk_gen : process is
   begin
 
-    while now < 400 ns loop -- 40 periods of 100MHz clock
+    while now < 1000 ns loop -- 40 periods of 100MHz clock
 
       sig_clk_100mhz <= '0';
       wait for c_CLK_100MHZ_PERIOD / 2;
@@ -47,9 +48,11 @@ begin
   uut_binary_to_morse : entity work.binary_to_morse
     port map (
       clk     => sig_clk_100mhz,
+      ce     => sig_en,
       snd     => sig_snd,
       morse   => sig_morse,
-      bin   => sig_bin
+      bin   => sig_bin,
+      rst   => sig_rst
     );
 
 
@@ -62,8 +65,14 @@ begin
    
 
     sig_snd <= '0';
+    sig_ce <= '1';
+    sig_rst <= '0';
+    wait for 20 ns;
+    sig_rst <= '1';
+    wait for 20 ns;
+    sig_rst <= '0';
     sig_bin <= "1000001";
-    wait for 10 ns;
+    wait for 20 ns;
     sig_snd <= '1';
 
     

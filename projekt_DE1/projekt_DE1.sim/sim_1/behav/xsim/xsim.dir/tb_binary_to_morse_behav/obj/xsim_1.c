@@ -60,15 +60,15 @@ IKI_DLLESPEC extern void execute_33(char*, char *);
 IKI_DLLESPEC extern void execute_31(char*, char *);
 IKI_DLLESPEC extern void execute_30(char*, char *);
 IKI_DLLESPEC extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-IKI_DLLESPEC extern void transaction_1(char*, char*, unsigned, unsigned, unsigned);
-funcp funcTab[7] = {(funcp)execute_27, (funcp)execute_32, (funcp)execute_33, (funcp)execute_31, (funcp)execute_30, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_1};
+IKI_DLLESPEC extern void transaction_2(char*, char*, unsigned, unsigned, unsigned);
+funcp funcTab[7] = {(funcp)execute_27, (funcp)execute_32, (funcp)execute_33, (funcp)execute_31, (funcp)execute_30, (funcp)vhdl_transfunc_eventcallback, (funcp)transaction_2};
 const int NumRelocateId= 7;
 
 void relocate(char *dp)
 {
 	iki_relocate(dp, "xsim.dir/tb_binary_to_morse_behav/xsim.reloc",  (void **)funcTab, 7);
-	iki_vhdl_file_variable_register(dp + 3688);
-	iki_vhdl_file_variable_register(dp + 3744);
+	iki_vhdl_file_variable_register(dp + 3736);
+	iki_vhdl_file_variable_register(dp + 3792);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */
