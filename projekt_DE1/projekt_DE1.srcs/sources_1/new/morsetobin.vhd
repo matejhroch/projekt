@@ -68,9 +68,9 @@ architecture Behavioral of morse_to_binary is
   -- 10 nic
   -- 11 nevyuzito
   
-  constant c_short0 : unsigned(4 downto 0) := b"0_0001"; -- 0.25 sec
-  constant c_short : unsigned(4 downto 0) := b"0_0010"; -- 0.5sec carka trojnasobek tecky
-  constant c_long  : unsigned(4 downto 0) := b"0_0110"; -- 1.5 sec
+  constant c_short0 : unsigned(4 downto 0) := b"0_0000"; -- 0 sec
+  constant c_short : unsigned(4 downto 0) := b"0_0001"; -- 0.2 sec carka trojnasobek tecky
+  constant c_long  : unsigned(4 downto 0) := b"0_0011"; -- 0.6 sec
 
 begin
     
@@ -87,6 +87,11 @@ morse_to_bin : process (clk) is
             	sig_cnt <= (others => '0');
                 sig_cnt_por <= (others => '0');
                 sig_prev <= '0';
+                sig_2nd <= "10";
+                sig_3rd <= "10";
+                sig_4th <= "10";
+                sig_1st <= "10";
+    
             
             end if; -- rst
             
@@ -154,6 +159,11 @@ morse_to_bin : process (clk) is
                                 fourth <= sig_4th;
                                 
                             when others =>
+                            
+                                sig_1st <= "10";
+                                sig_2nd <= "10";
+                            	sig_3rd <= "10";
+                            	sig_4th <= "10";
                                                         	                                
                                  -- odeslani
                                 
@@ -197,31 +207,34 @@ morse_to_bin : process (clk) is
                              sig_cnt <= (others => '0');
                              
                         else
-                          	if (sig_cnt > c_short0) then -- tecka
+                          	if (sig_cnt > c_short0) then -- tecka nebo mezera
+                          	
+                          	 if (sig_prev = '0') then -- tecka
                              
-                              if (sig_cnt_por = 1) then
-                             
-                             	sig_1st <= "00";
-                                
-                             elsif (sig_cnt_por = 2) then
-                             
-                             	sig_2nd <= "00";
-                                
-                             elsif (sig_cnt_por = 3) then
-                             
-                             	sig_3rd <= "00";
-                                
-                             elsif (sig_cnt_por = 4) then
-                             
-                             	sig_4th <= "00";                                                            
-                             	
-                             end if; 
-                             sig_cnt <= (others => '0');  
+                                  if (sig_cnt_por = 1) then 
+                                 
+                                    sig_1st <= "00";
+                                    
+                                 elsif (sig_cnt_por = 2) then
+                                 
+                                    sig_2nd <= "00";
+                                    
+                                 elsif (sig_cnt_por = 3) then
+                                 
+                                    sig_3rd <= "00";
+                                    
+                                 elsif (sig_cnt_por = 4) then
+                                 
+                                    sig_4th <= "00";                                                            
+                                    
+                                 end if; 
+                                 sig_cnt <= (others => '0');                                  
                              
                             else
                                 sig_cnt_por <= sig_cnt_por + 1; -- mezera
                                 sig_cnt <= (others => '0');
-                                                
+                                
+                               end if;                 
                             end if;            
                 		end if;
                  	end if;

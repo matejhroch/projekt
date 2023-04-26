@@ -1,6 +1,6 @@
 Vivado Simulator 2020.2
 Time resolution is 1 ps
 Note: Stimulus process started
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
+Time: 0 ps  Iteration: 0  Process: /tb_morse_to_binary/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_morse_to_binary.vhd
 Note: Stimulus process finished
-Time: 0 ps  Iteration: 0  Process: /tb_binary_to_morse/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd
+Time: 400 ns  Iteration: 0  Process: /tb_morse_to_binary/p_stimulus  File: C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_morse_to_binary.vhd

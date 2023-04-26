@@ -13,6 +13,8 @@ entity translator is
   
 port (
     clk       		 	  : in    std_logic;
+    rst       		 	  : in    std_logic;
+    ce       		 	  : in    std_logic;
     trans_recieve         : in    std_logic;
     first			      : in    std_logic_vector(1 downto 0);
     second			      : in    std_logic_vector(1 downto 0);
@@ -41,6 +43,15 @@ translator : process (clk) is
     if (trans_recieve = '0') then -- transmit/recieve
     
         if rising_edge(clk) then -- clk
+        
+          if (ce = '1') then -- ce
+        
+            if (rst = '1') then
+            
+                bin <= "0000000";
+           
+            
+            end if;
                
           
 ---------------------------------------------------------------------------------------------------------------------------------          
@@ -205,7 +216,8 @@ translator : process (clk) is
             
           end if; 
 -------------------------------------------------------------------------------------------------------------------------------------------
-        
+            end if; --ce
+            
         end if; --clk  
       
     end if; --transrecieve

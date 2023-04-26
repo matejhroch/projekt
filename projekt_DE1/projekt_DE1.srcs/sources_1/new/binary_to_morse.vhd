@@ -22,8 +22,8 @@ architecture Behavioral of binary_to_morse is
  
   signal sig_cnt   : unsigned(4 downto 0);
   constant c_short0 : unsigned(4 downto 0) := b"0_0001"; -- 0.5sec
-  constant c_short : unsigned(4 downto 0) := b"0_0010"; --0.75sec carka trojnasobek tecky
-  constant c_long  : unsigned(4 downto 0) := b"0_0110";
+  constant c_short : unsigned(4 downto 0) := b"0_0001"; --0.75sec carka trojnasobek tecky
+  constant c_long  : unsigned(4 downto 0) := b"0_0011";
 
 
 begin
