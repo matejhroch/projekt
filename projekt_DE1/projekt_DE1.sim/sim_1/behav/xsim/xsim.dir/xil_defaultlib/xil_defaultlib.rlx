@@ -1,9 +1,10 @@
 0.7
 2020.2
-Nov 18 2020
-09:47:47
-C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,1681910340,vhdl,,,,tb_binary_to_morse,,,,,,,,
-C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_morse_to_binary.vhd,1682521070,vhdl,,,,tb_morse_to_binary,,,,,,,,
-C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd,1681910067,vhdl,C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,,,binary_to_morse,,,,,,,,
-C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/clock_enable.vhd,1681310453,vhdl,C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd,,,clock_enable,,,,,,,,
-C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/morsetobin.vhd,1682520474,vhdl,C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_morse_to_binary.vhd,,,morse_to_binary,,,,,,,,
+Oct 14 2022
+05:20:55
+C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,1682806809,vhdl,,,,tb_binary_to_morse,,,,,,,,
+C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_morse_to_binary.vhd,1682805259,vhdl,,,,tb_morse_to_binary,,,,,,,,
+C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_translator.vhd,1682808197,vhdl,,,,tb_translator,,,,,,,,
+C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/binary_to_morse.vhd,1682806041,vhdl,C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_binary_to_morse.vhd,,,binary_to_morse,,,,,,,,
+C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/morsetobin.vhd,1682805590,vhdl,C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_morse_to_binary.vhd,,,morse_to_binary,,,,,,,,
+C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sources_1/new/translator.vhd,1682807735,vhdl,C:/Matej/projekt/projekt_DE1/projekt_DE1.srcs/sim_1/new/tb_translator.vhd,,,translator,,,,,,,,
