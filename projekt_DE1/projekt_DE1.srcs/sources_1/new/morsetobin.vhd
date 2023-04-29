@@ -1,39 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
------------------------------------------------------------------------------------------------------------
--- POPIS PROTOZE UZ SE V TOM NEVYZNAM --
---
---      sig_cnt je counter mezery, sig_cntpor je counter poradi pozice tecky nebo carky, sig_prev je hodnota predchozi
---     
---      Mohl by nastat problem kdyby mezera mezi teckou/carkou nebo carkou/teckou byla kratsi nez je delka tecky... to by se pak muselo rozhodovat i podle hodnoty predchoziho znaku... asi by slo overit ifem u podminky pro mezeru... ze tu mezeru jeste podminit tim, ze predchozi stav musi byt 1 a naopak u tecky musi byt predchozi stav 0 ale nevim...
--- 
---      Prvni if rozhoduje jestli je rezim transmitter/reciever... '0' je reciever
---          Pokud je reciever, ceka se na nabeznou hranu hodin
---              Pokud je reset v '1' tak se provede reset (wow)
---              Pokud ne rozhoduje se dal:
---                  Ceka se na enable signal, pokud je '1':
---                      Prvni if:
---                          -Pokud je predchozi stav = aktualnimu, inkrementuje se sig_cnt
---                          -Pokud je predchozi stav rozdilny od aktualniho rozhoduje se podle delky mezery (sig_cnt)
---                           Rozhoduje se od nejvyšší a je použito jen if else, takze by nemela byt kolize (snad xd)
---                              -Pokud je mezera delsi nez konstanta c_long, znamena to konec kodu, rozhoduje se podle poradi (sig_cntpor)
---                                  -Pokud je poradi = 1, vyplni se prvni znak a zbytek se vyplni "10"
---                                  -Pokud je poradi = 2, vyplni se prvni dva.... atd. atd.
---                                  Signaly se prenesou na vystup... je to udelane takto, aby se na vystupu nejak nemohly menit hodnoty (mozna useless)
---                              -Pokud je mezera delsi nez konstanta c_short, znamena to carku, rozhoduje se podle poradi
---                                  -Carka se vyplni na pozici kam ma, na konci se nuluje counter sig_cnt
---                              -Pokud je mezera delsi nez c_short0, jde o tecku a postupuje se obdobne...
---                              -Else -- pokud nic z vyse popsanych neplati, jde o mezeru, takze se resetuje counter mezery a inkrementuje se poradi
---
---
---                                 TO DO LIST -- doresit poradi (asi by se melo resetovat do 1 (jak je ted), ale proverit/vyzkouset)
---                                            -- zkontrolovat resetovani obou counteru...
---                                                  counter delky se resetuje pri detekci mezery takze snad ok
---                                                  counter poradi se resetuje pri odeslani takze snad taky ok
---                                            -- zkontrolovat sig_prev => morse
---
-
 
 entity morse_to_binary is
 
@@ -41,7 +8,6 @@ entity morse_to_binary is
 port (
     clk       		 	  : in    std_logic;
     rst       		 	  : in    std_logic;
-    ce       		 	  : in    std_logic;
     trans_recieve         : in    std_logic;
     morse     		 	  : in    std_logic;
     first			      : out    std_logic_vector(1 downto 0);
@@ -55,8 +21,8 @@ end entity morse_to_binary;
 
 architecture Behavioral of morse_to_binary is
 
-  signal sig_cnt   : unsigned(4 downto 0);
-  signal sig_cnt_por   : unsigned(4 downto 0);
+  signal sig_cnt   : unsigned(26 downto 0);
+  signal sig_cnt_por   : unsigned(2 downto 0);
   signal sig_prev   : std_logic;
   signal sig_1st   : std_logic_vector(1 downto 0);
   signal sig_2nd   : std_logic_vector(1 downto 0);
@@ -68,9 +34,9 @@ architecture Behavioral of morse_to_binary is
   -- 10 nic
   -- 11 nevyuzito
   
-  constant c_short0 : unsigned(4 downto 0) := b"0_0000"; -- 0 sec
-  constant c_short : unsigned(4 downto 0) := b"0_0001"; -- 0.2 sec carka trojnasobek tecky
-  constant c_long  : unsigned(4 downto 0) := b"0_0011"; -- 0.6 sec
+  constant c_short : unsigned(26 downto 0) := b"000_0000_0011_0000_1101_0100_0000"; -- 0.2 sec  "001_0011_0001_0010_1101_0000_0000"
+  constant c_long  : unsigned(26 downto 0) := b"000_0000_1001_0010_0111_1100_0000"; -- 0.6 sec   "011_1001_0011_1000_0111_0000_0000"
+  constant c_vlong  : unsigned(26 downto 0) := b"000_0000_1100_0011_0101_0000_0000"; -- 0.8 sec  "100_1100_0100_1011_0100_0000_0000"
 
 begin
     
@@ -84,32 +50,42 @@ morse_to_bin : process (clk) is
         
         	if (rst = '1') then -- rst
             
-            	sig_cnt <= (others => '0');
-                sig_cnt_por <= (others => '0');
-                sig_prev <= '0';
+            	sig_cnt <=  b"000_0000_0000_0000_0000_0000_0000";
+                sig_cnt_por <= b"001";
                 sig_2nd <= "10";
                 sig_3rd <= "10";
                 sig_4th <= "10";
                 sig_1st <= "10";
+                first <= sig_1st;
+                second <= sig_2nd;
+                third <= sig_3rd;
+                fourth <= sig_4th;
     
             
-            end if; -- rst
+            else
             
-            if (ce = '1') then -- clock_enable
 
                 
               if (morse = sig_prev) then --prevcheck
                     	
                     sig_cnt <= sig_cnt + 1;                                           
                    	sig_prev <= morse;
+                   	if (sig_cnt > c_vlong) then
+                   	
+                   	            first <= sig_1st;
+                                second <= sig_2nd;
+                                third <= sig_3rd;
+                                fourth <= sig_4th;
+                                sig_cnt_por <= b"001";
+                                
+                   	
+                   	end if;
                     
-                else
+               else
                    	                  
-                    if (sig_cnt > c_long) then -- konec
+                    if ((sig_cnt > c_long) and (sig_prev = '1')) then -- konec
                     
-					case (sig_cnt_por) is
-                        
-                        	when b"0_0001" =>
+					   if (sig_cnt_por = b"001") then                                               
                                               
                         	    sig_2nd <= "10";
                             	sig_3rd <= "10";
@@ -120,9 +96,9 @@ morse_to_bin : process (clk) is
                                 first <= sig_1st;
                                 second <= sig_2nd;
                                 third <= sig_3rd;
-                                fourth <= sig_4th;                                                                                                                              
+                                fourth <= sig_4th;
                             
-                            when b"0_0010" =>
+                       elsif (sig_cnt_por = b"010") then
                             
                             	sig_3rd <= "10";
                             	sig_4th <= "10";
@@ -136,7 +112,7 @@ morse_to_bin : process (clk) is
                                 
                             
                                 
-                            when b"0_0011" =>
+                        elsif (sig_cnt_por = b"011") then
                                                         	
                             	sig_4th <= "10";
                                 
@@ -149,7 +125,7 @@ morse_to_bin : process (clk) is
                                 
                          
                                 
-                            when b"0_0100" =>
+                        elsif (sig_cnt_por = b"100") then
                                                         	                                
                                  -- odeslani
                                 
@@ -158,7 +134,7 @@ morse_to_bin : process (clk) is
                                 third <= sig_3rd;
                                 fourth <= sig_4th;
                                 
-                            when others =>
+                        else
                             
                                 sig_1st <= "10";
                                 sig_2nd <= "10";
@@ -174,17 +150,16 @@ morse_to_bin : process (clk) is
                                 
                               
                                 
-                        end case;   
+                        end if;   
   
                                 
                                 -- reset
                                 
-                                sig_cnt_por <= b"0_0001";
+                                sig_cnt_por <= b"001";                                
                                 sig_prev <= '0';
                                 sig_cnt <= (others => '0');     
                     
-                    else 
-                      	if (sig_cnt > c_short) then -- carka
+                    elsif ((sig_cnt > c_short) and (c_long >= sig_cnt) and (sig_prev = '1')) then -- carka
                              
                              if (sig_cnt_por = 1) then
                              
@@ -206,10 +181,9 @@ morse_to_bin : process (clk) is
                              
                              sig_cnt <= (others => '0');
                              
-                        else
-                          	if (sig_cnt > c_short0) then -- tecka nebo mezera
+                      elsif (c_short >= sig_cnt) then -- tecka nebo mezera
                           	
-                          	 if (sig_prev = '0') then -- tecka
+                          	 if (sig_prev = '1') then -- tecka
                              
                                   if (sig_cnt_por = 1) then 
                                  
@@ -227,23 +201,30 @@ morse_to_bin : process (clk) is
                                  
                                     sig_4th <= "00";                                                            
                                     
+                                 end if;
                                  end if; 
                                  sig_cnt <= (others => '0');                                  
                              
-                            else
-                                sig_cnt_por <= sig_cnt_por + 1; -- mezera
+                         else
+                                
                                 sig_cnt <= (others => '0');
                                 
-                               end if;                 
-                            end if;            
+                                                
+                                        
                 		end if;
-                 	end if;
+                 
                           
-                    sig_prev <= morse;      
+                    sig_prev <= morse;
+                    
+                    if (sig_prev = '1') then
+                    
+                    sig_cnt_por <= sig_cnt_por + 1; 
+                    
+                    end if;      
                  	                  	                  	                
                 end if;-- prevcheck
-                    
-        	end if; -- clock_enable
+                sig_prev <= morse;     
+             end if; --rst       
     
     	end if; -- rising edge
         

@@ -137,7 +137,7 @@ translator : process (clk) is
            		end if;  
             
             
-          else
+          elsif (first = "01") then
             
             	if (second = "00") then
                   
@@ -212,9 +212,13 @@ translator : process (clk) is
              		bin <= "1010100"; --t 
               
            		end if;
-            
-            
-          end if; 
+           		
+           		else
+                    bin <= "0000000";
+                    
+                    
+              end if;
+   
 -------------------------------------------------------------------------------------------------------------------------------------------
             end if; --ce
             

@@ -106,7 +106,6 @@ morse_to_binary : entity work.morse_to_binary
     port map (
     clk    => CLK100MHZ,   		 	 
     rst    => BTNC,   		 	  
-    ce     => sig_ce,  		 	  
     trans_recieve  => SW(15),         
     morse  => JB,   		 	 
     first  => sig_first,			     
