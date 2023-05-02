@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/239009/projekt/projekt_DE1/projekt_DE1.runs/impl_1/top.tcl"
+  variable script "C:/Users/239009/projekt/projekt/projekt_DE1/projekt_DE1.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -131,15 +131,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/239009/projekt/projekt_DE1/projekt_DE1.cache/wt [current_project]
-  set_property parent.project_path C:/Users/239009/projekt/projekt_DE1/projekt_DE1.xpr [current_project]
-  set_property ip_output_repo C:/Users/239009/projekt/projekt_DE1/projekt_DE1.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/239009/projekt/projekt/projekt_DE1/projekt_DE1.cache/wt [current_project]
+  set_property parent.project_path C:/Users/239009/projekt/projekt/projekt_DE1/projekt_DE1.xpr [current_project]
+  set_property ip_output_repo C:/Users/239009/projekt/projekt/projekt_DE1/projekt_DE1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/239009/projekt/projekt_DE1/projekt_DE1.runs/synth_1/top.dcp
+  add_files -quiet C:/Users/239009/projekt/projekt/projekt_DE1/projekt_DE1.runs/synth_1/top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/239009/projekt/projekt_DE1/projekt_DE1.srcs/constrs_1/new/nexys-a7-50t.xdc
+  read_xdc C:/Users/239009/projekt/projekt/projekt_DE1/projekt_DE1.srcs/constrs_1/new/nexys-a7-50t.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
