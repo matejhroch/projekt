@@ -21,6 +21,7 @@ In the picture you can see all the cells on FPGA chip we've used in this project
 ![Screenshot (1)](https://user-images.githubusercontent.com/124798762/235774405-093d6ae6-4713-46e6-9974-36cd792a4ca0.png)
 
 Also in a more detail
+
 ![Screenshot (2)](https://user-images.githubusercontent.com/124798762/235774604-36cc2124-cded-4431-89c3-0c98ca15e3f9.png)
 
 
