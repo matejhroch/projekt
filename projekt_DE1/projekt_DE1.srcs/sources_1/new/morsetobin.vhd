@@ -1,3 +1,5 @@
+
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -34,9 +36,9 @@ architecture Behavioral of morse_to_binary is
   -- 10 nic
   -- 11 nevyuzito
   
-  constant c_short : unsigned(26 downto 0) := b"000_0000_0011_0000_1101_0100_0000"; -- 0.2 sec  "001_0011_0001_0010_1101_0000_0000"
-  constant c_long  : unsigned(26 downto 0) := b"000_0000_1001_0010_0111_1100_0000"; -- 0.6 sec   "011_1001_0011_1000_0111_0000_0000"
-  constant c_vlong  : unsigned(26 downto 0) := b"000_0000_1100_0011_0101_0000_0000"; -- 0.8 sec  "100_1100_0100_1011_0100_0000_0000"
+  constant c_short : unsigned(26 downto 0) := b"001_1100_1001_1100_0011_1000_0000"; -- 0.2 sec  "000_0000_0011_0000_1101_0100_0000" 001_0011_0001_0010_1101_0000_0000
+  constant c_long  : unsigned(26 downto 0) := b"100_0010_1100_0001_1101_1000_0000"; -- 0.6 sec  "000_0000_1001_0010_0111_1100_0000" "011_1001_0011_1000_0111_0000_0000"
+  constant c_vlong  : unsigned(26 downto 0) := b"101_1111_0101_1110_0001_0000_0000"; -- 0.8 sec "000_0000_1100_0011_0101_0000_0000" "100_1100_0100_1011_0100_0000_0000
 
 begin
     
@@ -232,4 +234,5 @@ morse_to_bin : process (clk) is
   
   end process morse_to_bin;
  
+
 end Behavioral;

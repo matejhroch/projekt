@@ -1,4 +1,5 @@
 
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
@@ -90,7 +91,7 @@ LED(9) <= sig_bin_out(0);
 clock_enable : entity work.clock_enable
     generic map (
       -- 1   @ 10 ns
-      -- 25 000 000 @ 250 ms
+      -- 20 000 000 @ 200 ms
       g_MAX => 20000000
     )
     port map (
@@ -132,5 +133,6 @@ translator : entity work.translator
 	     
     );    
     
+
 
 end architecture behavioral;

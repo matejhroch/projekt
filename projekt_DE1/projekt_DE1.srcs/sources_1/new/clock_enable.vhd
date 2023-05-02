@@ -29,23 +29,19 @@ architecture behavioral of clock_enable is
 
 begin
 
-  --------------------------------------------------------
-  -- p_clk_enable:
-  -- Generate clock enable signal. By default, enable signal
-  -- is low and generated pulse is always one clock long.
-  --------------------------------------------------------
+
   p_clk_enable : process (clk) is
   begin
 
-    if rising_edge(clk) then              -- Synchronous process
-      if (rst = '1') then                 -- High-active reset
-        sig_cnt_clk <= 0;                     -- Clear local counter
-        ce      <= '0';                   -- Set output to low
+    if rising_edge(clk) then             
+      if (rst = '1') then             
+        sig_cnt_clk <= 0;                
+        ce      <= '0';                  
 
-      -- Test number of clock periods
+     
       elsif (sig_cnt_clk >= (g_MAX - 1)) then
-        sig_cnt_clk <= 0;                     -- Clear local counter
-        ce      <= '1';                   -- Generate clock enable pulse
+        sig_cnt_clk <= 0;                   
+        ce      <= '1';                 
       else
         sig_cnt_clk <= sig_cnt_clk + 1;
         ce      <= '0';
