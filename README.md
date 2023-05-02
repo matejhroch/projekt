@@ -55,5 +55,7 @@ Write an instruction manual for your application, including photos or a link to 
 
 ## References
 
-1. Put here the literature references you used.
-2. ...
+1. https://en.wikipedia.org/wiki/Morse_code - Morse code alphabet
+2. https://www.rapidtables.com/convert/number/binary-to-decimal.html - convertion between decimal-binary and vice versa
+3. Some parts of our code was recycled from the labs of DE1 we've had this semester
+4. 
