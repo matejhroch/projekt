@@ -16,7 +16,13 @@ Morse code device should be able to send morse code as a signal, so this part of
 
 ## Hardware description of demo application
 
-Insert descriptive text and schematic(s) of your implementation.
+In the pictures you can see all the cells we've used in our FPGA chip for this project
+![Screenshot (1)](https://user-images.githubusercontent.com/124798762/235772953-d060da5e-30cc-4656-8e38-08af991a7aaa.png)
+
+Also in detail
+![Screenshot (2)](https://user-images.githubusercontent.com/124798762/235772955-36602f10-0505-4adb-ac5f-d5a240b28896.png)
+
+
 
 ## Software description
 
