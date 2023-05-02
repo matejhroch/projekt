@@ -3,7 +3,7 @@
 ### Team members
 
 * Member 1 - Matej Hroch (responsible for test benches, simulations )
-* Member 2 - Viliam Krištof (responsible for morse alphabet, documentation)
+* Member 2 - Viliam Krištof (responsible for morse alphabet, documentation, video)
 * Member 3 - Juraj Goryl (responsible for binary to morse and vice versa part, documentation)
 
 ## Theoretical description and explanation
@@ -51,9 +51,14 @@ Simulation of a translator from a recieved morse signal to binary (letters A and
 ## Instructions
 
 In a nutshell our solution is pretty straight forward.
+
 Firstly, morse coder - part that enables sending morse code (signal) either to a LED or to a pin which other devices are able to recieve.
-Although, typical telegraph works via direct transmitting signal of "beaps" we decided to use ASCII table. So for instance letter "A" is number 65 in ASCII. By toggling the 7 switches at the bottom of our FPGA board we're able to change the value from 1000001 all the way to 1011010 (65 to 90 in decimal numbers). Switch number 15 changes the function of our device, in this case upper position means "sending". 
-Write an instruction manual for your application, including photos or a link to a video.
+Although, typical telegraph works via direct transmitting signal of "beaps" we decided to use ASCII table. So for instance letter "A" is number 65 in ASCII. By toggling the 7 switches at the bottom of our FPGA board we're able to change the value from 1000001 all the way to 1011010 (65 to 90 in decimal numbers). Switch number 15 changes the function of our device, in this case upper position means "sending". By switching the switch 14 in a upper position we send the signal to a pin as well as to RGB LED which blinks according to a morse aplhabet.
+
+Secondly, morse decoder - part that enables to recieve and also interpret incoming signal, in this case, from Arduino. By pressing any given letter on a keyboard via putty the Arduino recieves a command to send a signal. Our board recieves (obviously with switch number 15 in a "recieving position" the signal which is translated into binary (corresponding again to the ASCII table) and diplayed on little green LEDs above the switches. We've also implemented the reset button - BTNC that resets the counter and puts zero(s) on both binary and morse outputs.
+The whole process of sending as well as recieving we've captured on a video that pretty much explains everything along with its functionality.
+
+https://www.youtube.com/watch?v=Mk9ulXtQHwA
 
 ## References
 
