@@ -29,12 +29,18 @@ Also in a more detail
 Schematic of our implementation
 <img width="517" alt="Screenshot (31)" src="https://user-images.githubusercontent.com/124798762/235775822-d7ec7cfe-daca-4946-b79b-e365da8ceac3.png">
 
-All the project files as well as sources, testbenches are included in a separate folder called "projekt
+All the project files as well as sources, testbenches are included in a separate folder called "projekt_DE1"
 
 
 ### Component(s) simulation
+Simulation of a binary to morse part with letters A and B in the picture
+![tb_bin_to_morse_AaB](https://user-images.githubusercontent.com/124798762/235776142-4440c6c6-61b9-435a-b82e-79c5797c02d8.png)
 
-Write descriptive text and simulation screenshots of your components.
+ Simulation of morse to binary part with letters A and B in the picture
+![tb_morse_to_bin_NaP](https://user-images.githubusercontent.com/124798762/235776329-928c101e-49c7-4fc7-974d-406f540fc2c5.png)
+
+![tb_translator_AaB](https://user-images.githubusercontent.com/124798762/235776646-5b271446-c8ee-4c42-b4ed-aa3a0d1e4a25.png)
+
 
 ## Instructions
 
