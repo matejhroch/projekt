@@ -26,7 +26,11 @@ Also in a more detail
 
 ## Software description
 
-Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders. 
+Schematic of our implementation
+<img width="517" alt="Screenshot (31)" src="https://user-images.githubusercontent.com/124798762/235775822-d7ec7cfe-daca-4946-b79b-e365da8ceac3.png">
+
+All the project files as well as sources, testbenches are included in a separate folder called "projekt
+
 
 ### Component(s) simulation
 
